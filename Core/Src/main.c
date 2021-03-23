@@ -102,6 +102,7 @@ int main(void)
 	MX_USART2_UART_Init();
 	/* USER CODE BEGIN 2 */
 
+	HAL_GPIO_TogglePin(LD2_Pin,	LD2_GPIO_Port);
 // #if UNITY_TEST == 1
   UNITY_BEGIN();
 
@@ -113,6 +114,7 @@ int main(void)
 
   UNITY_END();
 // #endif
+  HAL_GPIO_TogglePin(LD2_Pin,	LD2_GPIO_Port);
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
@@ -120,7 +122,8 @@ int main(void)
 	while (1)
 	{
 		/* USER CODE END WHILE */
-
+		HAL_GPIO_TogglePin(LD2_Pin,	LD2_GPIO_Port);
+		HAL_Delay(500);
 		/* USER CODE BEGIN 3 */
 	}
 	/* USER CODE END 3 */
